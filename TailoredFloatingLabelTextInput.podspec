@@ -25,7 +25,7 @@ s.ios.deployment_target = '9.0'
 
 
 # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-s.source = { :git => "git@github.com:AutSoft/TailoredFloatingLabelTextInput.git", :tag => "#{s.version}" }
+s.source = { :git => "https://github.com/AutSoft/TailoredFloatingLabelTextInput.git", :tag => "#{s.version}" }
 
 
 # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

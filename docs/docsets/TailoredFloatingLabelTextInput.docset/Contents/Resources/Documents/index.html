@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TailoredFloatingLabelTextInput  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="TailoredFloatingLabelTextInput  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">TailoredFloatingLabelTextInput Docs</a> (100% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">TailoredFloatingLabelTextInput Reference</a>
+        <img id="carat" src="img/carat.png" />
+        TailoredFloatingLabelTextInput  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/TailoredTextField.html">TailoredTextField</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/TailoredTextInputLayout.html">TailoredTextInputLayout</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/TailoredTextAlignment.html">TailoredTextAlignment</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/TailoredTextFieldDelegate.html">TailoredTextFieldDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs.html#/s:V30TailoredFloatingLabelTextInput10BottomLine">BottomLine</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='tailored-floating-label-text-input' class='heading'>Tailored Floating Label Text Input</h1>
+
+<p><a href="https://developer.apple.com/swift/"><img src="https://img.shields.io/badge/Swift-3.0-orange.svg?style=flat" alt="Swift 3.0"></a>
+<a href="https://developer.apple.com/swift/"><img src="https://img.shields.io/badge/Platforms-iOS-lightgray.svg?style=flat" alt="Platforms iOS"></a>
+<a href="https://developer.apple.com/swift/"><img src="https://img.shields.io/badge/Xcode-8.0+-blue.svg?style=flat" alt="Xcode 8.0+"></a></p>
+
+<p>A highly customizable text input field written in Swift which have a floating label design pattern implementation among many other features. It has no external dependencies and can be used to implement not just Google&rsquo;s Material Design spec but many other designs as well.</p>
+<h2 id='features' class='heading'>Features</h2>
+
+<ul>
+<li>Animated Floating Label</li>
+<li>Details and error display</li>
+<li>Highly customizable</li>
+<li>Material Design specs can be implemented with ease (see examples)</li>
+<li>Drop shadows</li>
+<li>Colored backgrounds with corner radius</li>
+<li>Configurable in Interface Builder</li>
+</ul>
+<h2 id='requirements' class='heading'> Requirements</h2>
+
+<ul>
+<li>Swift 3</li>
+<li>iOS 9.0+</li>
+<li>XCode8</li>
+</ul>
+<h2 id='installation' class='heading'> Installation</h2>
+<h3 id='cocoapods' class='heading'>CocoaPods</h3>
+
+<p>TailoredFloatingLabelTextInput is available through CocoaPods. To install it, simply add the following line to your Podfile:</p>
+<pre class="highlight plaintext"><code>pod 'TailoredFloatingLabelTextInput', '[latest version, see releases]'
+</code></pre>
+<h2 id='usage' class='heading'> Usage</h2>
+
+<p>Two UIView are included in this library:</p>
+
+<ul>
+<li>TailoredTextField</li>
+<li>TailoredTextInputLayout</li>
+</ul>
+
+<p>Most of the features are available with both, but there are some limitations and differences for each, which are detailed below.</p>
+<h3 id='tailoredtextfield' class='heading'>TailoredTextField</h3>
+
+<p>Inherited from <code>UITextField</code>, it is more convinient to use, as all properties of the <code>UITextField</code> is easily accessible both from the code and Interface Builder, and it can be used everywhere where a simple <code>UITextField</code> can be used.</p>
+
+<p>It can be configured from Interface Builder or code, all of the <code>UITextField</code></p>
+
+<p>However, compared to the <code>TailoredTextInputLayout</code> it has somewhat limited functionality due to the limitations raised by being a <code>UITextField</code> without a custom layout. If you run into these limitations, consider using the <code>TailoredTextInputLayout</code> instead, which is a custom view that contains a <code>TailoredTextField</code> in a custom layout and provides more features, but cannot be used as <code>UITextField</code> (it does not inherit from it).</p>
+
+<p>The following properties can be changed to customize the appearance and behaviour:</p>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Property</th>
+<th style="text-align: left">Description</th>
+<th style="text-align: left">Type</th>
+<th style="text-align: left">Default Value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left">text</td>
+<td style="text-align: left">The text content of the TextField.</td>
+<td style="text-align: left">String?</td>
+<td style="text-align: left">nil</td>
+</tr>
+<tr>
+<td style="text-align: left">textInsetX</td>
+<td style="text-align: left">The inset before and after the text.</td>
+<td style="text-align: left">CGFloat</td>
+<td style="text-align: left">0</td>
+</tr>
+<tr>
+<td style="text-align: left">textInsetY</td>
+<td style="text-align: left">The inset above and below the text.</td>
+<td style="text-align: left">CGFloat</td>
+<td style="text-align: left">0</td>
+</tr>
+<tr>
+<td style="text-align: left">backgroundCornerRadius</td>
+<td style="text-align: left">The corner radius of the TextField background.</td>
+<td style="text-align: left">CGFloat</td>
+<td style="text-align: left">0</td>
+</tr>
+<tr>
+<td style="text-align: left">borderEnabled</td>
+<td style="text-align: left">Whether the border is displayed or not for the TextField.</td>
+<td style="text-align: left">Bool</td>
+<td style="text-align: left">false</td>
+</tr>
+<tr>
+<td style="text-align: left">normalBorderColor</td>
+<td style="text-align: left">The color of the border for the normal state.</td>
+<td style="text-align: left">UIColor?</td>
+<td style="text-align: left">nil</td>
+</tr>
+<tr>
+<td style="text-align: left">dropShadowColor</td>
+<td style="text-align: left">The color of the drop shadow. If it is set, the drop shadow will be displayed.</td>
+<td style="text-align: left">UIColor?</td>
+<td style="text-align: left">nil</td>
+</tr>
+<tr>
+<td style="text-align: left">dropShadowOpacity</td>
+<td style="text-align: left">The opacity of the drop shadow.</td>
+<td style="text-align: left">Float</td>
+<td style="text-align: left">0.0</td>
+</tr>
+<tr>
+<td style="text-align: left">bottomLineEnabled</td>
+<td style="text-align: left">Whether the bottom line is displayed for the TextField.</td>
+<td style="text-align: left">Bool</td>
+<td style="text-align: left">false</td>
+</tr>
+<tr>
+<td style="text-align: left">bottomLineNormalColor</td>
+<td style="text-align: left">The color of the bottom line when it is in the normal state.</td>
+<td style="text-align: left">UIColor?</td>
+<td style="text-align: left">nil</td>
+</tr>
+<tr>
+<td style="text-align: left">bottomLineActiveColor</td>
+<td style="text-align: left">The color of the bottom line when it is in the active state.</td>
+<td style="text-align: left">UIColor?</td>
+<td style="text-align: left">nil</td>
+</tr>
+<tr>
+<td style="text-align: left">bottomLineErrorColor</td>
+<td style="text-align: left">The color of the bottom line when it is in the error state.</td>
+<td style="text-align: left">UIColor?</td>
+<td style="text-align: left">nil</td>
+</tr>
+<tr>
+<td style="text-align: left">floatingLabelEnabled</td>
+<td style="text-align: left">Whether the placeholder text is displayed as a floating label when the TextField is active.</td>
+<td style="text-align: left">Bool</td>
+<td style="text-align: left">true</td>
+</tr>
+<tr>
+<td style="text-align: left">floatingLabelTranslateY</td>
+<td style="text-align: left">The value which the floating label needs to be tranlated upwards.</td>
+<td style="text-align: left">CGFloat</td>
+<td style="text-align: left">36.0</td>
+</tr>
+<tr>
+<td style="text-align: left">floatingLabelTextColor</td>
+<td style="text-align: left">The text color of the floating label.</td>
+<td style="text-align: left">UIColor?</td>
+<td style="text-align: left">nil</td>
+</tr>
+<tr>
+<td style="text-align: left">floatingLabelErrorTextColor</td>
+<td style="text-align: left">The text color of the floating label when the TextField is in the error state.</td>
+<td style="text-align: left">UIColor?</td>
+<td style="text-align: left">nil</td>
+</tr>
+<tr>
+<td style="text-align: left">floatingLabelInsetX</td>
+<td style="text-align: left">The inset before the floating label.</td>
+<td style="text-align: left">CGFloat</td>
+<td style="text-align: left">0</td>
+</tr>
+<tr>
+<td style="text-align: left">isPlaceholderOnlyChangedOnTextEntered</td>
+<td style="text-align: left">Whether the placeholder display is changed as soon as the TextField becomes a first responder or only when text is entered.</td>
+<td style="text-align: left">Bool</td>
+<td style="text-align: left">false</td>
+</tr>
+<tr>
+<td style="text-align: left">placeholderInsetX</td>
+<td style="text-align: left">The inset before and after the placeholder label.</td>
+<td style="text-align: left">CGFloat</td>
+<td style="text-align: left">0</td>
+</tr>
+<tr>
+<td style="text-align: left">placeholderInsetY</td>
+<td style="text-align: left">The inset above and below the placeholder label.</td>
+<td style="text-align: left">CGFloat</td>
+<td style="text-align: left">0</td>
+</tr>
+<tr>
+<td style="text-align: left">placeholderText</td>
+<td style="text-align: left">The text to be displayed as placeholder and also as a floating label if that functionality is enabled.</td>
+<td style="text-align: left">String?</td>
+<td style="text-align: left">nil</td>
+</tr>
+<tr>
+<td style="text-align: left">placeholderTextColor</td>
+<td style="text-align: left">The text color of the placeholder.</td>
+<td style="text-align: left">UIColor?</td>
+<td style="text-align: left">nil</td>
+</tr>
+<tr>
+<td style="text-align: left">detailInsetX</td>
+<td style="text-align: left">The inset before and after the detail label.</td>
+<td style="text-align: left">CGFloat</td>
+<td style="text-align: left">0</td>
+</tr>
+<tr>
+<td style="text-align: left">detailText</td>
+<td style="text-align: left">The text displayed in the detail label.</td>
+<td style="text-align: left">String?</td>
+<td style="text-align: left">nil</td>
+</tr>
+<tr>
+<td style="text-align: left">detailTextColor</td>
+<td style="text-align: left">The text color of the detail text.</td>
+<td style="text-align: left">UIColor?</td>
+<td style="text-align: left">nil</td>
+</tr>
+<tr>
+<td style="text-align: left">detailTextAlignment</td>
+<td style="text-align: left">The alignment of the detail text.</td>
+<td style="text-align: left">TailoredTextAlignment</td>
+<td style="text-align: left">.left</td>
+</tr>
+<tr>
+<td style="text-align: left">errorInsetX</td>
+<td style="text-align: left">The inset to be applied before and after the error text.</td>
+<td style="text-align: left">CGFloat</td>
+<td style="text-align: left">0</td>
+</tr>
+<tr>
+<td style="text-align: left">errorText</td>
+<td style="text-align: left">The text to be displayed as an error.</td>
+<td style="text-align: left">String?</td>
+<td style="text-align: left">0</td>
+</tr>
+<tr>
+<td style="text-align: left">clearErrorOnInput</td>
+<td style="text-align: left">Whether the error state should be cleared as soon as text is entered.</td>
+<td style="text-align: left">Bool</td>
+<td style="text-align: left">false</td>
+</tr>
+<tr>
+<td style="text-align: left">displayBorderOnError</td>
+<td style="text-align: left">Whether a border should be displayed in error state.</td>
+<td style="text-align: left">Bool</td>
+<td style="text-align: left">false</td>
+</tr>
+<tr>
+<td style="text-align: left">errorBorderColor</td>
+<td style="text-align: left">The color of the border for the error state.</td>
+<td style="text-align: left">UIColor?</td>
+<td style="text-align: left">nil</td>
+</tr>
+<tr>
+<td style="text-align: left">errorTextColor</td>
+<td style="text-align: left">The text color of the error text.</td>
+<td style="text-align: left">UIColor?</td>
+<td style="text-align: left">nil</td>
+</tr>
+<tr>
+<td style="text-align: left">errorBackgroundColor</td>
+<td style="text-align: left">The background color of the error text.</td>
+<td style="text-align: left">UIColor?</td>
+<td style="text-align: left">nil</td>
+</tr>
+<tr>
+<td style="text-align: left">errorBackgroundBottomCornerRadius</td>
+<td style="text-align: left">The bottom corner radius of the TextField background.</td>
+<td style="text-align: left">CGFloat</td>
+<td style="text-align: left">0.0</td>
+</tr>
+</tbody></table>
+
+<p>Limitations compared to <code>TailoredTextInputLayout</code>:</p>
+
+<ul>
+<li>Drop shadow can only be displayed for the whole View (it can be enabled by setting the <code>dropShadowColor</code> and <code>dropShadowOpacity</code> properties), including the floating label, error and detail labels.</li>
+</ul>
+<h3 id='tailoredtextinputlayout' class='heading'>TailoredTextInputLayout</h3>
+
+<p>It is a custom view with its layout being defined in a Xib file. It provides all of the functionality of this library without any limitations of the <code>TailoredTextField</code>, but cannot be used where a <code>UITextField</code> instance can. It is still configurable in Interface Builder, but some of the properties of <code>UITextField</code> can only be configured from code by accessing them via the contained <code>TailoredTextField</code> property.</p>
+
+<p>Setting these properties can be done simply with a property observer:</p>
+<pre class="highlight swift"><code><span class="kd">@IBOutlet</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">textInput</span><span class="p">:</span> <span class="kt">TailoredTextInputLayout</span><span class="o">!</span> <span class="p">{</span>
+    <span class="k">didSet</span> <span class="p">{</span>
+        <span class="n">textInput</span><span class="o">.</span><span class="n">textField</span><span class="o">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="k">self</span>
+        <span class="n">textInput</span><span class="o">.</span><span class="n">textField</span><span class="o">.</span><span class="n">keyboardType</span> <span class="o">=</span> <span class="o">.</span><span class="n">emailAddress</span>
+        <span class="n">textInput</span><span class="o">.</span><span class="n">textField</span><span class="o">.</span><span class="n">autocorrectionType</span> <span class="o">=</span> <span class="o">.</span><span class="n">no</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>The following properties can be changed to customize the appearance and behaviour:</p>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Property</th>
+<th style="text-align: left">Description</th>
+<th style="text-align: left">Type</th>
+<th style="text-align: left">Default Value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left">text</td>
+<td style="text-align: left">The text content of the TextField.</td>
+<td style="text-align: left">String?</td>
+<td style="text-align: left">nil</td>
+</tr>
+<tr>
+<td style="text-align: left">textInsetX</td>
+<td style="text-align: left">The inset before and after the text.</td>
+<td style="text-align: left">CGFloat</td>
+<td style="text-align: left">0.0</td>
+</tr>
+<tr>
+<td style="text-align: left">textInsetY</td>
+<td style="text-align: left">The inset above and below the text.</td>
+<td style="text-align: left">CGFloat</td>
+<td style="text-align: left">0.0</td>
+</tr>
+<tr>
+<td style="text-align: left">textFieldHeight</td>
+<td style="text-align: left">The height of the contained TextField.</td>
+<td style="text-align: left">CGFloat</td>
+<td style="text-align: left">0.0</td>
+</tr>
+<tr>
+<td style="text-align: left">backroundFillColor</td>
+<td style="text-align: left">he background color of the conatined TailoredTextField.</td>
+<td style="text-align: left">UIColor?</td>
+<td style="text-align: left">nil</td>
+</tr>
+<tr>
+<td style="text-align: left">textFieldCornerRadius</td>
+<td style="text-align: left">The corner radius of the conatined TailoredTextField‘s background.</td>
+<td style="text-align: left">CGFloat</td>
+<td style="text-align: left">0.0</td>
+</tr>
+<tr>
+<td style="text-align: left">borderEnabled</td>
+<td style="text-align: left">Whether the border is displayed or not for the TextField.</td>
+<td style="text-align: left">Bool</td>
+<td style="text-align: left">false</td>
+</tr>
+<tr>
+<td style="text-align: left">normalBorderColor</td>
+<td style="text-align: left">The color of the border for the normal state.</td>
+<td style="text-align: left">UIColor?</td>
+<td style="text-align: left">nil</td>
+</tr>
+<tr>
+<td style="text-align: left">dropShadowColor</td>
+<td style="text-align: left">The color of the drop shadow. If it is set, the drop shadow will be displayed.</td>
+<td style="text-align: left">UIColor?</td>
+<td style="text-align: left">nil</td>
+</tr>
+<tr>
+<td style="text-align: left">dropShadowOpacity</td>
+<td style="text-align: left">The opacity of the drop shadow.</td>
+<td style="text-align: left">Float</td>
+<td style="text-align: left">0.0</td>
+</tr>
+<tr>
+<td style="text-align: left">bottomLineEnabled</td>
+<td style="text-align: left">Whether the bottom line is displayed for the TextField.</td>
+<td style="text-align: left">Bool</td>
+<td style="text-align: left">false</td>
+</tr>
+<tr>
+<td style="text-align: left">bottomLineNormalColor</td>
+<td style="text-align: left">The color of the bottom line when it is in the normal state.</td>
+<td style="text-align: left">UIColor?</td>
+<td style="text-align: left">nil</td>
+</tr>
+<tr>
+<td style="text-align: left">bottomLineActiveColor</td>
+<td style="text-align: left">The color of the bottom line when it is in the active state.</td>
+<td style="text-align: left">UIColor?</td>
+<td style="text-align: left">nil</td>
+</tr>
+<tr>
+<td style="text-align: left">bottomLineErrorColor</td>
+<td style="text-align: left">The color of the bottom line when it is in the error state.</td>
+<td style="text-align: left">UIColor?</td>
+<td style="text-align: left">nil</td>
+</tr>
+<tr>
+<td style="text-align: left">floatingLabelEnabled</td>
+<td style="text-align: left">Whether the placeholder text is displayed as a floating label when the TextField is active.</td>
+<td style="text-align: left">Bool</td>
+<td style="text-align: left">true</td>
+</tr>
+<tr>
+<td style="text-align: left">floatingLabelTranslateY</td>
+<td style="text-align: left">The value which the floating label needs to be tranlated upwards.</td>
+<td style="text-align: left">CGFloat</td>
+<td style="text-align: left">36.0</td>
+</tr>
+<tr>
+<td style="text-align: left">floatingLabelTextColor</td>
+<td style="text-align: left">The text color of the floating label.</td>
+<td style="text-align: left">UIColor?</td>
+<td style="text-align: left">nil</td>
+</tr>
+<tr>
+<td style="text-align: left">floatingLabelErrorTextColor</td>
+<td style="text-align: left">The text color of the floating label when the TextField is in the error state.</td>
+<td style="text-align: left">UIColor?</td>
+<td style="text-align: left">nil</td>
+</tr>
+<tr>
+<td style="text-align: left">floatingLabelInsetX</td>
+<td style="text-align: left">The inset before the floating label.</td>
+<td style="text-align: left">CGFloat</td>
+<td style="text-align: left">0</td>
+</tr>
+<tr>
+<td style="text-align: left">isPlaceholderOnlyChangedOnTextEntered</td>
+<td style="text-align: left">Whether the placeholder display is changed as soon as the TextField becomes a first responder or only when text is entered.</td>
+<td style="text-align: left">Bool</td>
+<td style="text-align: left">false</td>
+</tr>
+<tr>
+<td style="text-align: left">placeholderInsetX</td>
+<td style="text-align: left">The inset before and after the placeholder label.</td>
+<td style="text-align: left">CGFloat</td>
+<td style="text-align: left">0</td>
+</tr>
+<tr>
+<td style="text-align: left">placeholderInsetY</td>
+<td style="text-align: left">The inset above and below the placeholder label.</td>
+<td style="text-align: left">CGFloat</td>
+<td style="text-align: left">0</td>
+</tr>
+<tr>
+<td style="text-align: left">placeholderText</td>
+<td style="text-align: left">The text to be displayed as placeholder and also as a floating label if that functionality is enabled.</td>
+<td style="text-align: left">String?</td>
+<td style="text-align: left">nil</td>
+</tr>
+<tr>
+<td style="text-align: left">placeholderTextColor</td>
+<td style="text-align: left">The text color of the placeholder.</td>
+<td style="text-align: left">UIColor?</td>
+<td style="text-align: left">nil</td>
+</tr>
+<tr>
+<td style="text-align: left">detailInsetX</td>
+<td style="text-align: left">The inset before and after the detail label.</td>
+<td style="text-align: left">CGFloat</td>
+<td style="text-align: left">0</td>
+</tr>
+<tr>
+<td style="text-align: left">detailText</td>
+<td style="text-align: left">The text displayed in the detail label.</td>
+<td style="text-align: left">String?</td>
+<td style="text-align: left">nil</td>
+</tr>
+<tr>
+<td style="text-align: left">detailTextColor</td>
+<td style="text-align: left">The text color of the detail text.</td>
+<td style="text-align: left">UIColor?</td>
+<td style="text-align: left">nil</td>
+</tr>
+<tr>
+<td style="text-align: left">detailTextAlignment</td>
+<td style="text-align: left">The alignment of the detail text.</td>
+<td style="text-align: left">TailoredTextAlignment</td>
+<td style="text-align: left">.left</td>
+</tr>
+<tr>
+<td style="text-align: left">errorInsetX</td>
+<td style="text-align: left">The inset to be applied before and after the error text.</td>
+<td style="text-align: left">CGFloat</td>
+<td style="text-align: left">0</td>
+</tr>
+<tr>
+<td style="text-align: left">errorText</td>
+<td style="text-align: left">The text to be displayed as an error.</td>
+<td style="text-align: left">String?</td>
+<td style="text-align: left">0</td>
+</tr>
+<tr>
+<td style="text-align: left">clearErrorOnInput</td>
+<td style="text-align: left">Whether the error state should be cleared as soon as text is entered.</td>
+<td style="text-align: left">Bool</td>
+<td style="text-align: left">false</td>
+</tr>
+<tr>
+<td style="text-align: left">displayBorderOnError</td>
+<td style="text-align: left">Whether a border should be displayed in error state.</td>
+<td style="text-align: left">Bool</td>
+<td style="text-align: left">false</td>
+</tr>
+<tr>
+<td style="text-align: left">errorBorderColor</td>
+<td style="text-align: left">The color of the border for the error state.</td>
+<td style="text-align: left">UIColor?</td>
+<td style="text-align: left">nil</td>
+</tr>
+<tr>
+<td style="text-align: left">errorTextColor</td>
+<td style="text-align: left">The text color of the error text.</td>
+<td style="text-align: left">UIColor?</td>
+<td style="text-align: left">nil</td>
+</tr>
+<tr>
+<td style="text-align: left">errorBackgroundColor</td>
+<td style="text-align: left">The background color of the error text.</td>
+<td style="text-align: left">UIColor?</td>
+<td style="text-align: left">nil</td>
+</tr>
+<tr>
+<td style="text-align: left">errorBackgroundBottomCornerRadius</td>
+<td style="text-align: left">The bottom corner radius of the TextField background.</td>
+<td style="text-align: left">CGFloat</td>
+<td style="text-align: left">0.0</td>
+</tr>
+</tbody></table>
+<h3 id='also-see' class='heading'>Also See</h3>
+
+<ul>
+<li>The <code>TailoredFloatingLabelTextInputDemo</code> demo project for usage examples</li>
+<li>Full code documentation in the <code>docs</code> folder</li>
+</ul>
+<h2 id='development-goals' class='heading'>Development Goals</h2>
+
+<ul>
+<li>[x] Floating Label with nice, continous animation</li>
+<li>[x] Customizable error and detail display</li>
+<li>[x] Configuration from Interface Builder (<code>@IBDesignable</code> with <code>@IBInspectable</code> properties)</li>
+<li>[x] Normal and boxed Material Design Text Field implementations</li>
+<li>[x] Full Code Documentation</li>
+<li>[ ] CI integration</li>
+<li>[ ] Unit tests</li>
+<li>[ ] UI Tests with screenshot comparison</li>
+</ul>
+<h2 id='license' class='heading'>License</h2>
+
+<p>This library is released under the <a href="https://github.com/realm/jazzy/blob/master/LICENSE">MIT license</a>.</p>
+<pre class="highlight plaintext"><code>Copyright (c) 2017 AutSoft Kft.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+</code></pre>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2017 <a class="link" href="https://gitlab.autsoft.hu/AutLibs/TailoredFloatingLabelTextInput" target="_blank" rel="external">AutSoft Kft. and Balázs Gerlei</a>. All rights reserved. (Last updated: 2017-06-26)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

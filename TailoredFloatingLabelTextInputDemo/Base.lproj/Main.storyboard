@@ -1,0 +1,1049 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tailored Floating Label Text Input Demo-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Tailored Floating Label Text Input Demo" id="BYZ-38-t0r" customClass="MainViewController" customModule="TailoredFloatingLabelTextInputDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pi2-vE-0TQ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="barTintColor" red="0.55686274509803924" green="0.039215686274509803" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem id="61G-9J-q4q">
+                                        <nil key="title"/>
+                                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="Elb-qT-n1U">
+                                            <rect key="frame" x="75" y="7" width="225" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <segments>
+                                                <segment title="TextInputLayout"/>
+                                                <segment title="TextField"/>
+                                            </segments>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="onSegmentedControlValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="P0d-sX-gSW"/>
+                                            </connections>
+                                        </segmentedControl>
+                                    </navigationItem>
+                                </items>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="27p-LF-W7G"/>
+                                </connections>
+                            </navigationBar>
+                            <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VNQ-jf-XAH">
+                                <rect key="frame" x="0.0" y="64" width="375" height="483"/>
+                                <connections>
+                                    <segue destination="L8Y-YX-00p" kind="embed" identifier="embedTextFieldViewController" id="ruq-C8-BnS"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8wX-gz-zqV">
+                                <rect key="frame" x="0.0" y="64" width="375" height="483"/>
+                                <connections>
+                                    <segue destination="eEL-E9-lsI" kind="embed" identifier="embedTextInputLayoutViewController" id="T1V-qQ-Eyv"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4JB-eh-naF">
+                                <rect key="frame" x="0.0" y="547" width="375" height="120"/>
+                                <subviews>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="iV4-pN-5cg">
+                                        <rect key="frame" x="310" y="16" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="onErrorStateSwitchValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="GBE-mc-wWC"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="OQs-VE-Wln">
+                                        <rect key="frame" x="310" y="63" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="onClearErrorOnTextEntrySwitchValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="ekK-6q-fQh"/>
+                                        </connections>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error State" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vL2-Cq-3LQ">
+                                        <rect key="frame" x="224" y="22" width="78" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clear Error on Text Entry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZU-WP-B6P">
+                                        <rect key="frame" x="124" y="69" width="178" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="vL2-Cq-3LQ" firstAttribute="centerY" secondItem="iV4-pN-5cg" secondAttribute="centerY" id="26g-6A-nvJ"/>
+                                    <constraint firstItem="RZU-WP-B6P" firstAttribute="centerY" secondItem="OQs-VE-Wln" secondAttribute="centerY" id="26k-Bs-iS3"/>
+                                    <constraint firstItem="iV4-pN-5cg" firstAttribute="top" secondItem="4JB-eh-naF" secondAttribute="top" constant="16" id="7K3-na-x3a"/>
+                                    <constraint firstItem="OQs-VE-Wln" firstAttribute="top" secondItem="iV4-pN-5cg" secondAttribute="bottom" constant="16" id="Amm-4y-RTH"/>
+                                    <constraint firstItem="iV4-pN-5cg" firstAttribute="leading" secondItem="vL2-Cq-3LQ" secondAttribute="trailing" constant="8" id="Kcf-U4-GhP"/>
+                                    <constraint firstItem="OQs-VE-Wln" firstAttribute="leading" secondItem="RZU-WP-B6P" secondAttribute="trailing" constant="8" id="Tjb-HM-pI5"/>
+                                    <constraint firstAttribute="height" constant="120" id="XTe-8n-s2H"/>
+                                    <constraint firstAttribute="trailing" secondItem="iV4-pN-5cg" secondAttribute="trailing" constant="16" id="Z60-Le-eo7"/>
+                                    <constraint firstAttribute="trailing" secondItem="OQs-VE-Wln" secondAttribute="trailing" constant="16" id="gkg-0t-qOj"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4JB-eh-naF" secondAttribute="bottom" id="2HV-GU-szk"/>
+                            <constraint firstItem="4JB-eh-naF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3ZC-xB-jqB"/>
+                            <constraint firstItem="pi2-vE-0TQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="8tg-SI-yzn"/>
+                            <constraint firstItem="4JB-eh-naF" firstAttribute="top" secondItem="VNQ-jf-XAH" secondAttribute="bottom" id="BCN-Pn-0hO"/>
+                            <constraint firstItem="pi2-vE-0TQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BfI-iT-ETt"/>
+                            <constraint firstItem="8wX-gz-zqV" firstAttribute="top" secondItem="pi2-vE-0TQ" secondAttribute="bottom" id="J89-81-XWa"/>
+                            <constraint firstAttribute="trailing" secondItem="VNQ-jf-XAH" secondAttribute="trailing" id="NTT-Cj-14X"/>
+                            <constraint firstItem="4JB-eh-naF" firstAttribute="top" secondItem="8wX-gz-zqV" secondAttribute="bottom" id="Sex-Hr-Idw"/>
+                            <constraint firstAttribute="trailing" secondItem="pi2-vE-0TQ" secondAttribute="trailing" id="Snj-bs-STM"/>
+                            <constraint firstAttribute="trailing" secondItem="8wX-gz-zqV" secondAttribute="trailing" id="Vka-sd-evU"/>
+                            <constraint firstAttribute="trailing" secondItem="4JB-eh-naF" secondAttribute="trailing" id="Xz1-W2-9Vs"/>
+                            <constraint firstItem="VNQ-jf-XAH" firstAttribute="top" secondItem="pi2-vE-0TQ" secondAttribute="bottom" id="frV-AJ-G0p"/>
+                            <constraint firstItem="8wX-gz-zqV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="v3A-eq-IKa"/>
+                            <constraint firstItem="VNQ-jf-XAH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wMR-DE-Psa"/>
+                        </constraints>
+                    </view>
+                    <attributedString key="userComments">
+                        <fragment>
+                            <mutableString key="content">Copyright (c) 2017 AutSoft Kft.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+</mutableString>
+                            <attributes>
+                                <font key="NSFont" metaFont="smallSystem"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <connections>
+                        <outlet property="bottomViewHeightConstraint" destination="XTe-8n-s2H" id="VIA-xR-H7U"/>
+                        <outlet property="clearErrorOnTextEntrySwitch" destination="OQs-VE-Wln" id="4eL-3j-MNP"/>
+                        <outlet property="errorStateSwitch" destination="iV4-pN-5cg" id="2O1-09-JqI"/>
+                        <outlet property="segmentedControl" destination="Elb-qT-n1U" id="sQx-sW-QuX"/>
+                        <outlet property="textFieldContainer" destination="VNQ-jf-XAH" id="4R6-vS-rbU"/>
+                        <outlet property="textInputLayoutContainer" destination="8wX-gz-zqV" id="4Vx-h3-rpG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="35.532233883058474"/>
+        </scene>
+        <!--Text Input Layout View Controller-->
+        <scene sceneID="5A6-QL-Hup">
+            <objects>
+                <viewController id="eEL-E9-lsI" customClass="TextInputLayoutViewController" customModule="TailoredFloatingLabelTextInputDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jB0-0o-ckn"/>
+                        <viewControllerLayoutGuide type="bottom" id="4Qn-yu-u82"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Rzz-p3-HFs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3uh-5w-C6c">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="63U-hG-eXH">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zoq-NJ-EBq" customClass="TailoredTextInputLayout" customModule="TailoredFloatingLabelTextInput">
+                                                <rect key="frame" x="16" y="8" width="343" height="88"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="88" id="Zpt-xg-dI7"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Placeholder"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderTextColor">
+                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="bottomLineNormalColor">
+                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="bottomLineActiveColor">
+                                                        <color key="value" red="0.18823529411764706" green="0.18823529411764706" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLineEnabled" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isPlaceholderOnlyChangedOnTextEntered" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelTextColor">
+                                                        <color key="value" red="0.18823529411764706" green="0.18823529411764706" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="backroundFillColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="textFieldHeight">
+                                                        <real key="value" value="40"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="textInsetX">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderInsetX">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="floatingLabelInsetX">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="detailText" value="Material Design-like with Background color"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="errorTextColor">
+                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="detailTextColor">
+                                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="bottomLineErrorColor">
+                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelErrorTextColor">
+                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clearErrorOnInput" value="NO"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bE9-5v-i6x" customClass="TailoredTextInputLayout" customModule="TailoredFloatingLabelTextInput">
+                                                <rect key="frame" x="16" y="96" width="343" height="88"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="88" id="IFH-uJ-FoP"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Placeholder"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderTextColor">
+                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="bottomLineNormalColor">
+                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="bottomLineActiveColor">
+                                                        <color key="value" red="0.18823529411764706" green="0.18823529411764706" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLineEnabled" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isPlaceholderOnlyChangedOnTextEntered" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelTextColor">
+                                                        <color key="value" red="0.18823529411764706" green="0.18823529411764706" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="textFieldHeight">
+                                                        <real key="value" value="40"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="floatingLabelInsetX">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="detailText" value="Material Design style"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="errorTextColor">
+                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="detailTextColor">
+                                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="bottomLineErrorColor">
+                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelErrorTextColor">
+                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clearErrorOnInput" value="NO"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nn9-N9-DMW" customClass="TailoredTextInputLayout" customModule="TailoredFloatingLabelTextInput">
+                                                <rect key="frame" x="16" y="184" width="343" height="88"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="88" id="BZV-zG-Nwk"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Placeholder"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderTextColor">
+                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="bottomLineNormalColor">
+                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="bottomLineActiveColor">
+                                                        <color key="value" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLineEnabled" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isPlaceholderOnlyChangedOnTextEntered" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelTextColor">
+                                                        <color key="value" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="backroundFillColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="textFieldHeight">
+                                                        <real key="value" value="50"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="textInsetX">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderInsetX">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="floatingLabelInsetX">
+                                                        <real key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="detailText" value="Material Design boxed style"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="errorTextColor">
+                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="detailTextColor">
+                                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="bottomLineErrorColor">
+                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelErrorTextColor">
+                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clearErrorOnInput" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="textFieldCornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="floatingLabelTranslateY">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4yI-mT-St3" customClass="TailoredTextInputLayout" customModule="TailoredFloatingLabelTextInput">
+                                                <rect key="frame" x="16" y="280" width="343" height="88"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="88" id="lSs-Js-7dQ"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Placeholder"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderTextColor">
+                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLineEnabled" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isPlaceholderOnlyChangedOnTextEntered" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelTextColor">
+                                                        <color key="value" red="0.18823529411764706" green="0.18823529411764706" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="textFieldHeight">
+                                                        <real key="value" value="40"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="textInsetX">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderInsetX">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="floatingLabelInsetX">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="detailText" value="Rounded Corners and Drop Shadow"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="backroundFillColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="dropShadowColor">
+                                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="dropShadowOpacity">
+                                                        <real key="value" value="0.40000000000000002"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="textFieldCornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="errorBackgroundColor">
+                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="errorInsetX">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="errorTextAlignmentName" value="center"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="errorTextColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clearErrorOnInput" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="detailTextColor">
+                                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="displayBorderOnError" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelErrorTextColor">
+                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="floatingLabelTranslateY">
+                                                        <real key="value" value="40"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5dy-oZ-3Jt" customClass="TailoredTextInputLayout" customModule="TailoredFloatingLabelTextInput">
+                                                <rect key="frame" x="16" y="368" width="343" height="88"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="88" id="TPO-ap-gex"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Placeholder"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderTextColor">
+                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLineEnabled" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isPlaceholderOnlyChangedOnTextEntered" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelTextColor">
+                                                        <color key="value" red="0.18823529411764706" green="0.18823529411764706" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="textFieldHeight">
+                                                        <real key="value" value="40"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="textInsetX">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderInsetX">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="floatingLabelInsetX">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="detailText" value="Rounded Corners and Borders"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="backroundFillColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="textFieldCornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="errorBackgroundColor">
+                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="errorInsetX">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="errorTextAlignmentName" value="center"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="errorTextColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clearErrorOnInput" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="detailTextColor">
+                                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="displayBorderOnError" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="errorBorderColor">
+                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="borderEnabled" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="normalBorderColor">
+                                                        <color key="value" red="0.18823529411764706" green="0.18823529411764706" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelErrorTextColor">
+                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="errorBackgroundBottomCornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="floatingLabelTranslateY">
+                                                        <real key="value" value="40"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0kQ-ec-3Dh" customClass="TailoredTextInputLayout" customModule="TailoredFloatingLabelTextInput">
+                                                <rect key="frame" x="16" y="472" width="343" height="62"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="62" id="EAb-23-mzB"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Placeholder"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderTextColor">
+                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLineEnabled" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isPlaceholderOnlyChangedOnTextEntered" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="textFieldHeight">
+                                                        <real key="value" value="40"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="textInsetX">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderInsetX">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="detailText" value="Rounded Corners without Floating Labels"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="backroundFillColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="textFieldCornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="errorInsetX">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="errorTextAlignmentName" value="right"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="errorTextColor">
+                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clearErrorOnInput" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="detailTextColor">
+                                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="displayBorderOnError" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="errorBorderColor">
+                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="borderEnabled" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="normalBorderColor">
+                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="floatingLabelEnabled" value="NO"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="5dy-oZ-3Jt" secondAttribute="trailing" constant="16" id="2vx-YP-xEv"/>
+                                            <constraint firstAttribute="trailing" secondItem="4yI-mT-St3" secondAttribute="trailing" constant="16" id="Afx-P3-lIx"/>
+                                            <constraint firstItem="nn9-N9-DMW" firstAttribute="top" secondItem="bE9-5v-i6x" secondAttribute="bottom" id="BBY-DJ-4Ji"/>
+                                            <constraint firstItem="5dy-oZ-3Jt" firstAttribute="top" secondItem="4yI-mT-St3" secondAttribute="bottom" id="Eit-7r-nuA"/>
+                                            <constraint firstAttribute="trailing" secondItem="Zoq-NJ-EBq" secondAttribute="trailing" constant="16" id="J5x-d4-cWd"/>
+                                            <constraint firstAttribute="trailing" secondItem="nn9-N9-DMW" secondAttribute="trailing" constant="16" id="JCY-it-jCX"/>
+                                            <constraint firstAttribute="bottom" secondItem="0kQ-ec-3Dh" secondAttribute="bottom" constant="20" id="MJQ-D9-HFZ"/>
+                                            <constraint firstItem="nn9-N9-DMW" firstAttribute="leading" secondItem="63U-hG-eXH" secondAttribute="leading" constant="16" id="Pgl-jd-cMR"/>
+                                            <constraint firstAttribute="trailing" secondItem="bE9-5v-i6x" secondAttribute="trailing" constant="16" id="S3H-jE-eZC"/>
+                                            <constraint firstItem="0kQ-ec-3Dh" firstAttribute="top" secondItem="5dy-oZ-3Jt" secondAttribute="bottom" constant="16" id="SPN-Gd-JhH"/>
+                                            <constraint firstItem="0kQ-ec-3Dh" firstAttribute="leading" secondItem="63U-hG-eXH" secondAttribute="leading" constant="16" id="Tj4-yj-6Ov"/>
+                                            <constraint firstItem="4yI-mT-St3" firstAttribute="top" secondItem="nn9-N9-DMW" secondAttribute="bottom" constant="8" id="Uew-Ps-rB7"/>
+                                            <constraint firstItem="bE9-5v-i6x" firstAttribute="top" secondItem="Zoq-NJ-EBq" secondAttribute="bottom" id="ZdP-yF-y9u"/>
+                                            <constraint firstItem="5dy-oZ-3Jt" firstAttribute="leading" secondItem="63U-hG-eXH" secondAttribute="leading" constant="16" id="chn-rl-Gjd"/>
+                                            <constraint firstItem="Zoq-NJ-EBq" firstAttribute="top" secondItem="63U-hG-eXH" secondAttribute="top" constant="8" id="ckc-wE-PxL"/>
+                                            <constraint firstItem="4yI-mT-St3" firstAttribute="leading" secondItem="63U-hG-eXH" secondAttribute="leading" constant="16" id="cqD-DK-VNP"/>
+                                            <constraint firstItem="Zoq-NJ-EBq" firstAttribute="leading" secondItem="63U-hG-eXH" secondAttribute="leading" constant="16" id="eJQ-m4-ztX"/>
+                                            <constraint firstItem="bE9-5v-i6x" firstAttribute="leading" secondItem="63U-hG-eXH" secondAttribute="leading" constant="16" id="lTh-1F-V7u"/>
+                                            <constraint firstAttribute="trailing" secondItem="0kQ-ec-3Dh" secondAttribute="trailing" constant="16" id="rMC-wG-5P8"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="63U-hG-eXH" secondAttribute="trailing" id="3M5-2N-1LA"/>
+                                    <constraint firstItem="63U-hG-eXH" firstAttribute="leading" secondItem="3uh-5w-C6c" secondAttribute="leading" id="KNF-lG-nln"/>
+                                    <constraint firstAttribute="bottom" secondItem="63U-hG-eXH" secondAttribute="bottom" id="ZXH-jt-oyU"/>
+                                    <constraint firstItem="63U-hG-eXH" firstAttribute="top" secondItem="3uh-5w-C6c" secondAttribute="top" id="mAF-h4-kST"/>
+                                    <constraint firstItem="63U-hG-eXH" firstAttribute="width" secondItem="3uh-5w-C6c" secondAttribute="width" id="u7q-V8-4zu"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="3uh-5w-C6c" secondAttribute="bottom" id="KqN-Ke-Mdj"/>
+                            <constraint firstItem="3uh-5w-C6c" firstAttribute="top" secondItem="Rzz-p3-HFs" secondAttribute="top" id="ZQH-SC-lYN"/>
+                            <constraint firstAttribute="trailing" secondItem="3uh-5w-C6c" secondAttribute="trailing" id="bZW-qM-oHT"/>
+                            <constraint firstItem="3uh-5w-C6c" firstAttribute="leading" secondItem="Rzz-p3-HFs" secondAttribute="leading" id="mzh-sc-7lr"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="600"/>
+                    <attributedString key="userComments">
+                        <fragment>
+                            <mutableString key="content">Copyright (c) 2017 AutSoft Kft.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+</mutableString>
+                            <attributes>
+                                <font key="NSFont" metaFont="smallSystem"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <connections>
+                        <outlet property="scrollView" destination="3uh-5w-C6c" id="GJL-2G-L1v"/>
+                        <outlet property="textInput1" destination="Zoq-NJ-EBq" id="1uO-6H-9Pg"/>
+                        <outlet property="textInput2" destination="bE9-5v-i6x" id="MRI-T6-kqm"/>
+                        <outlet property="textInput3" destination="nn9-N9-DMW" id="a3D-kH-GUd"/>
+                        <outlet property="textInput4" destination="4yI-mT-St3" id="csO-oo-VIE"/>
+                        <outlet property="textInput5" destination="5dy-oZ-3Jt" id="aVY-Dy-OzX"/>
+                        <outlet property="textInput6" destination="0kQ-ec-3Dh" id="TyT-lu-bZ4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nGa-Fs-zZx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-596" y="768"/>
+        </scene>
+        <!--Text Field View Controller-->
+        <scene sceneID="j1i-pQ-An5">
+            <objects>
+                <viewController id="L8Y-YX-00p" customClass="TextFieldViewController" customModule="TailoredFloatingLabelTextInputDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yjd-JI-xWs"/>
+                        <viewControllerLayoutGuide type="bottom" id="1kV-hR-k4h"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fTT-JG-SK5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bc8-SU-hVw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ti-zO-19F">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kJ3-Sg-lNO" customClass="TailoredTextField" customModule="TailoredFloatingLabelTextInput">
+                                                <rect key="frame" x="16" y="37" width="343" height="40"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="XjG-HK-f1O"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="textInsetX">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLineEnabled" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="bottomLineNormalColor">
+                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="bottomLineActiveColor">
+                                                        <color key="value" red="0.18823529411764706" green="0.18823529411764706" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="bottomLineErrorColor">
+                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelTextColor">
+                                                        <color key="value" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelErrorTextColor">
+                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="floatingLabelInsetX">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isPlaceholderOnlyChangedOnTextEntered" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderInsetX">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Placeholder"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderTextColor">
+                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="detailText" value="Material Design-like with Background color"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="detailTextColor">
+                                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clearErrorOnInput" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="errorTextColor">
+                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="delegate" destination="L8Y-YX-00p" id="ep9-an-bGH"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CbU-WK-qWa" customClass="TailoredTextField" customModule="TailoredFloatingLabelTextInput">
+                                                <rect key="frame" x="16" y="125" width="343" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="6ZE-3g-DZV"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLineEnabled" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="bottomLineNormalColor">
+                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="bottomLineActiveColor">
+                                                        <color key="value" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="bottomLineErrorColor">
+                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelTextColor">
+                                                        <color key="value" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelErrorTextColor">
+                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="floatingLabelInsetX">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isPlaceholderOnlyChangedOnTextEntered" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Placeholder"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderTextColor">
+                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="detailText" value="Material Design style"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="detailTextColor">
+                                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clearErrorOnInput" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="errorTextColor">
+                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="delegate" destination="L8Y-YX-00p" id="R6X-ox-KTg"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wcr-nq-fQk" customClass="TailoredTextField" customModule="TailoredFloatingLabelTextInput">
+                                                <rect key="frame" x="16" y="213" width="343" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="zC6-BS-T69"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="backgroundCornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="textInsetX">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLineEnabled" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="bottomLineNormalColor">
+                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="bottomLineActiveColor">
+                                                        <color key="value" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="bottomLineErrorColor">
+                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="floatingLabelTranslateY">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelTextColor">
+                                                        <color key="value" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelErrorTextColor">
+                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="floatingLabelInsetX">
+                                                        <real key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isPlaceholderOnlyChangedOnTextEntered" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderInsetX">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Placeholder"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderTextColor">
+                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="detailText" value="Material Design boxed style"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="detailTextColor">
+                                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="errorTextColor">
+                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="delegate" destination="L8Y-YX-00p" id="CLd-3q-WvZ"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pXd-sK-KoE" customClass="TailoredTextField" customModule="TailoredFloatingLabelTextInput">
+                                                <rect key="frame" x="16" y="397" width="343" height="40"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="yEI-UU-tbV"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="textInsetX">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="borderEnabled" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="normalBorderColor">
+                                                        <color key="value" white="0.24932183159722221" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="backgroundCornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelTextColor">
+                                                        <color key="value" white="0.24932183159999999" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelErrorTextColor">
+                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="floatingLabelInsetX">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isPlaceholderOnlyChangedOnTextEntered" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderInsetX">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Placeholder"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderTextColor">
+                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="detailText" value="Rounded Corners and Borders"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="detailTextColor">
+                                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="displayBorderOnError" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clearErrorOnInput" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="errorBorderColor">
+                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="errorTextColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="errorBackgroundColor">
+                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLineEnabled" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="errorInsetX">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="errorTextAlignmentName" value="center"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="errorBackgroundBottomCornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="floatingLabelTranslateY">
+                                                        <real key="value" value="40"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="delegate" destination="L8Y-YX-00p" id="K4k-m6-ZYZ"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QJT-Tw-WLN" customClass="TailoredTextField" customModule="TailoredFloatingLabelTextInput">
+                                                <rect key="frame" x="16" y="472" width="343" height="40"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="wtv-ss-Uxw"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="textInsetX">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="borderEnabled" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="normalBorderColor">
+                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="backgroundCornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLineEnabled" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="floatingLabelEnabled" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isPlaceholderOnlyChangedOnTextEntered" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderInsetX">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderTextColor">
+                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Placeholder"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="detailText" value="Rounded Corners without Floating Labels"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="detailTextColor">
+                                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="displayBorderOnError" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clearErrorOnInput" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="errorBorderColor">
+                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="errorTextColor">
+                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="errorTextAlignmentName" value="right"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="errorInsetX">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="delegate" destination="L8Y-YX-00p" id="pou-vW-3K3"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="166-bY-NEc" customClass="TailoredTextField" customModule="TailoredFloatingLabelTextInput">
+                                                <rect key="frame" x="16" y="309" width="343" height="40"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="Oez-Ya-cST"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="textInsetX">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="backgroundCornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="dropShadowColor">
+                                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="dropShadowOpacity">
+                                                        <real key="value" value="0.40000000000000002"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLineEnabled" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelTextColor">
+                                                        <color key="value" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelErrorTextColor">
+                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="floatingLabelInsetX">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isPlaceholderOnlyChangedOnTextEntered" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderInsetX">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Placeholder"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderTextColor">
+                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="detailText" value="Rounded Corners and Drop Shadow"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="detailTextColor">
+                                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="displayBorderOnError" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clearErrorOnInput" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="errorTextColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="errorBackgroundColor">
+                                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="errorInsetX">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="errorTextAlignmentName" value="center"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="floatingLabelTranslateY">
+                                                        <real key="value" value="40"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="delegate" destination="L8Y-YX-00p" id="HZS-nc-2u5"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="pXd-sK-KoE" firstAttribute="leading" secondItem="0Ti-zO-19F" secondAttribute="leading" constant="16" id="3bV-1P-0FQ"/>
+                                            <constraint firstItem="wcr-nq-fQk" firstAttribute="top" secondItem="CbU-WK-qWa" secondAttribute="bottom" constant="48" id="6aw-iL-kJM"/>
+                                            <constraint firstAttribute="trailing" secondItem="pXd-sK-KoE" secondAttribute="trailing" constant="16" id="8ZF-AB-M9s"/>
+                                            <constraint firstItem="kJ3-Sg-lNO" firstAttribute="top" secondItem="0Ti-zO-19F" secondAttribute="top" constant="37" id="Jqs-7O-cbx"/>
+                                            <constraint firstAttribute="trailing" secondItem="kJ3-Sg-lNO" secondAttribute="trailing" constant="16" id="Ml9-nc-mfJ"/>
+                                            <constraint firstItem="CbU-WK-qWa" firstAttribute="top" secondItem="kJ3-Sg-lNO" secondAttribute="bottom" constant="48" id="NNf-3J-xMl"/>
+                                            <constraint firstItem="CbU-WK-qWa" firstAttribute="leading" secondItem="0Ti-zO-19F" secondAttribute="leading" constant="16" id="Q61-39-MiD"/>
+                                            <constraint firstItem="166-bY-NEc" firstAttribute="leading" secondItem="0Ti-zO-19F" secondAttribute="leading" constant="16" id="Ths-5b-qaF"/>
+                                            <constraint firstItem="166-bY-NEc" firstAttribute="top" secondItem="wcr-nq-fQk" secondAttribute="bottom" constant="46" id="bSA-me-0KW"/>
+                                            <constraint firstItem="wcr-nq-fQk" firstAttribute="leading" secondItem="0Ti-zO-19F" secondAttribute="leading" constant="16" id="cD8-It-CAG"/>
+                                            <constraint firstItem="pXd-sK-KoE" firstAttribute="top" secondItem="166-bY-NEc" secondAttribute="bottom" constant="48" id="cjb-pS-JlQ"/>
+                                            <constraint firstItem="kJ3-Sg-lNO" firstAttribute="leading" secondItem="0Ti-zO-19F" secondAttribute="leading" constant="16" id="ebu-cK-yfS"/>
+                                            <constraint firstItem="QJT-Tw-WLN" firstAttribute="leading" secondItem="0Ti-zO-19F" secondAttribute="leading" constant="16" id="fmo-bv-kj7"/>
+                                            <constraint firstAttribute="trailing" secondItem="CbU-WK-qWa" secondAttribute="trailing" constant="16" id="iE3-Lb-Njh"/>
+                                            <constraint firstAttribute="trailing" secondItem="QJT-Tw-WLN" secondAttribute="trailing" constant="16" id="irZ-SW-rV2"/>
+                                            <constraint firstAttribute="bottom" secondItem="QJT-Tw-WLN" secondAttribute="bottom" constant="42" id="rDr-pq-jZR"/>
+                                            <constraint firstItem="QJT-Tw-WLN" firstAttribute="top" secondItem="pXd-sK-KoE" secondAttribute="bottom" constant="35" id="tes-K4-dRy"/>
+                                            <constraint firstAttribute="trailing" secondItem="wcr-nq-fQk" secondAttribute="trailing" constant="16" id="vTy-iL-VsV"/>
+                                            <constraint firstAttribute="trailing" secondItem="166-bY-NEc" secondAttribute="trailing" constant="16" id="x1Y-kG-kbC"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="0Ti-zO-19F" secondAttribute="trailing" id="4RQ-or-9CY"/>
+                                    <constraint firstAttribute="trailing" secondItem="0Ti-zO-19F" secondAttribute="trailing" id="6HC-Je-4Sb"/>
+                                    <constraint firstItem="0Ti-zO-19F" firstAttribute="leading" secondItem="bc8-SU-hVw" secondAttribute="leading" id="Bif-sD-rol"/>
+                                    <constraint firstItem="0Ti-zO-19F" firstAttribute="width" secondItem="bc8-SU-hVw" secondAttribute="width" id="KPR-Tb-Uyp"/>
+                                    <constraint firstItem="0Ti-zO-19F" firstAttribute="leading" secondItem="bc8-SU-hVw" secondAttribute="leading" id="QKa-ln-Uqh"/>
+                                    <constraint firstAttribute="bottom" secondItem="0Ti-zO-19F" secondAttribute="bottom" id="SlX-pY-fbx"/>
+                                    <constraint firstAttribute="bottom" secondItem="0Ti-zO-19F" secondAttribute="bottom" id="gSr-E6-lOg"/>
+                                    <constraint firstItem="0Ti-zO-19F" firstAttribute="top" secondItem="bc8-SU-hVw" secondAttribute="top" id="mjf-iS-Noc"/>
+                                    <constraint firstItem="0Ti-zO-19F" firstAttribute="top" secondItem="bc8-SU-hVw" secondAttribute="top" id="qNJ-7i-spi"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="bc8-SU-hVw" secondAttribute="trailing" id="1hp-ee-gOb"/>
+                            <constraint firstItem="bc8-SU-hVw" firstAttribute="leading" secondItem="fTT-JG-SK5" secondAttribute="leading" id="B2u-Ru-aaz"/>
+                            <constraint firstItem="bc8-SU-hVw" firstAttribute="top" secondItem="yjd-JI-xWs" secondAttribute="bottom" id="CtB-Z2-v6S"/>
+                            <constraint firstItem="1kV-hR-k4h" firstAttribute="top" secondItem="bc8-SU-hVw" secondAttribute="bottom" id="v0j-bd-xNx"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="600"/>
+                    <attributedString key="userComments">
+                        <fragment>
+                            <mutableString key="content">Copyright (c) 2017 AutSoft Kft.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+</mutableString>
+                            <attributes>
+                                <font key="NSFont" metaFont="smallSystem"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <connections>
+                        <outlet property="scrollView" destination="bc8-SU-hVw" id="K6h-Un-L8W"/>
+                        <outlet property="textInput1" destination="kJ3-Sg-lNO" id="Qsb-2b-j2u"/>
+                        <outlet property="textInput2" destination="CbU-WK-qWa" id="6Wg-zr-mn8"/>
+                        <outlet property="textInput3" destination="wcr-nq-fQk" id="uWw-td-cl0"/>
+                        <outlet property="textInput4" destination="166-bY-NEc" id="IsC-X9-cTc"/>
+                        <outlet property="textInput5" destination="pXd-sK-KoE" id="kAG-Oq-eKg"/>
+                        <outlet property="textInput6" destination="QJT-Tw-WLN" id="sEk-pH-8JG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3FO-pd-zwC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="725.60000000000002" y="766.41679160419801"/>
+        </scene>
+    </scenes>
+</document>

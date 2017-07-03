@@ -1,0 +1,1483 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TailoredTextInputLayout Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/TailoredTextInputLayout" class="dashAnchor"></a>
+    <a title="TailoredTextInputLayout Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">TailoredFloatingLabelTextInput Docs</a> (100% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">TailoredFloatingLabelTextInput Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        TailoredTextInputLayout Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/TailoredTextField.html">TailoredTextField</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TailoredTextInputLayout.html">TailoredTextInputLayout</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/TailoredTextAlignment.html">TailoredTextAlignment</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/TailoredTextFieldDelegate.html">TailoredTextFieldDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs.html#/s:V30TailoredFloatingLabelTextInput10BottomLine">BottomLine</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>TailoredTextInputLayout</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">TailoredTextInputLayout</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
+
+                </div>
+              </div>
+            <p>A container layout, inherited from <code>UIView</code>, containing a <code><a href="../Classes/TailoredTextField.html">TailoredTextField</a></code>
+which highly customizable text input field, inherited from <code>UITextField</code>.</p>
+
+<p>Although it is less convinient to set up than the <code><a href="../Classes/TailoredTextField.html">TailoredTextField</a></code> itself,
+this view provide more customization options, for example the drop shadow
+can be applied to only the TextField, rather than only for all of the components
+like the floating label, error and detail labels.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Text%20content%20customization"></a>
+                <a name="//apple_ref/swift/Section/Text content customization" class="dashAnchor"></a>
+                <a href="#/Text%20content%20customization">
+                  <h3 class="section-name">Text content customization</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout4textGSqSS_"></a>
+                    <a name="//apple_ref/swift/Property/text" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout4textGSqSS_">text</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The text contained in the TextField.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    This is only a property for conviniently accessing the text
+of the contained <code>TextField</code>, but it can be also done by
+setting the <code>text</code> property of the <code>TextField</code>, accessible
+via the <code><a href="../Classes/TailoredTextInputLayout.html#/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout9textFieldXwGSQCS_17TailoredTextField_">textField</a></code> property.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">text</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout10textInsetXV12CoreGraphics7CGFloat"></a>
+                    <a name="//apple_ref/swift/Property/textInsetX" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout10textInsetXV12CoreGraphics7CGFloat">textInsetX</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The inset before and after the text.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">textInsetX</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout10textInsetYV12CoreGraphics7CGFloat"></a>
+                    <a name="//apple_ref/swift/Property/textInsetY" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout10textInsetYV12CoreGraphics7CGFloat">textInsetY</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The inset above and below the text.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">textInsetY</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout15textFieldHeightV12CoreGraphics7CGFloat"></a>
+                    <a name="//apple_ref/swift/Property/textFieldHeight" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout15textFieldHeightV12CoreGraphics7CGFloat">textFieldHeight</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The height of the contained <code><a href="../Classes/TailoredTextField.html">TailoredTextField</a></code>.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    This property sets the consant value of the constraint that
+sets the height of the <code><a href="../Classes/TailoredTextField.html">TailoredTextField</a></code>.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">textFieldHeight</span><span class="p">:</span> <span class="kt">CGFloat</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Background%20customization"></a>
+                <a name="//apple_ref/swift/Section/Background customization" class="dashAnchor"></a>
+                <a href="#/Background%20customization">
+                  <h3 class="section-name">Background customization</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout18backroundFillColorGSqCSo7UIColor_"></a>
+                    <a name="//apple_ref/swift/Property/backroundFillColor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout18backroundFillColorGSqCSo7UIColor_">backroundFillColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The background color of the conatined <code><a href="../Classes/TailoredTextField.html">TailoredTextField</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">backroundFillColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout21textFieldCornerRadiusV12CoreGraphics7CGFloat"></a>
+                    <a name="//apple_ref/swift/Property/textFieldCornerRadius" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout21textFieldCornerRadiusV12CoreGraphics7CGFloat">textFieldCornerRadius</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The corner radius of the conatined <code><a href="../Classes/TailoredTextField.html">TailoredTextField</a></code>&lsquo;s background.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">textFieldCornerRadius</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mf">0.0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Border%20customization"></a>
+                <a name="//apple_ref/swift/Section/Border customization" class="dashAnchor"></a>
+                <a href="#/Border%20customization">
+                  <h3 class="section-name">Border customization</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout13borderEnabledSb"></a>
+                    <a name="//apple_ref/swift/Property/borderEnabled" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout13borderEnabledSb">borderEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Whether the border is displayed or not for the conatined <code><a href="../Classes/TailoredTextField.html">TailoredTextField</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">borderEnabled</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout17normalBorderColorGSqCSo7UIColor_"></a>
+                    <a name="//apple_ref/swift/Property/normalBorderColor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout17normalBorderColorGSqCSo7UIColor_">normalBorderColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color of the border for the normal state (when there is no error).</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    It is only taken into account if the <code><a href="../Classes/TailoredTextInputLayout.html#/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout13borderEnabledSb">borderEnabled</a></code> is set to <code>true</code>.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">normalBorderColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Drop%20shadow%20customization"></a>
+                <a name="//apple_ref/swift/Section/Drop shadow customization" class="dashAnchor"></a>
+                <a href="#/Drop%20shadow%20customization">
+                  <h3 class="section-name">Drop shadow customization</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout15dropShadowColorGSqCSo7UIColor_"></a>
+                    <a name="//apple_ref/swift/Property/dropShadowColor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout15dropShadowColorGSqCSo7UIColor_">dropShadowColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color of the drop shadow. If it is set, the drop shadow will be displayed.
+The opacity of the drop shadow can be set with the <code><a href="../Classes/TailoredTextInputLayout.html#/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout17dropShadowOpacitySf">dropShadowOpacity</a></code> property.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Contrary to the <code><a href="../Classes/TailoredTextField.html">TailoredTextField</a></code>, the drop shadow is only displayed
+below the TextField itself, and not the other components (like the floating labe
+or the detail label).
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">dropShadowColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout17dropShadowOpacitySf"></a>
+                    <a name="//apple_ref/swift/Property/dropShadowOpacity" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout17dropShadowOpacitySf">dropShadowOpacity</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The opacity of the drop shadow.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    It is only taken into account if the <code><a href="../Classes/TailoredTextInputLayout.html#/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout15dropShadowColorGSqCSo7UIColor_">dropShadowColor</a></code> is not <code>nil</code>.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">dropShadowOpacity</span><span class="p">:</span> <span class="kt">Float</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Bottom%20line%20customization"></a>
+                <a name="//apple_ref/swift/Section/Bottom line customization" class="dashAnchor"></a>
+                <a href="#/Bottom%20line%20customization">
+                  <h3 class="section-name">Bottom line customization</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout17bottomLineEnabledSb"></a>
+                    <a name="//apple_ref/swift/Property/bottomLineEnabled" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout17bottomLineEnabledSb">bottomLineEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Whether the bottom line is displayed for the TextField.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">bottomLineEnabled</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout21bottomLineNormalColorGSqCSo7UIColor_"></a>
+                    <a name="//apple_ref/swift/Property/bottomLineNormalColor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout21bottomLineNormalColorGSqCSo7UIColor_">bottomLineNormalColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color of the bottom line when it is in the normal state (not active or error).</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    It is only taken into account if the <code><a href="../Classes/TailoredTextInputLayout.html#/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout17bottomLineEnabledSb">bottomLineEnabled</a></code> is set to <code>true</code>.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">bottomLineNormalColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout21bottomLineActiveColorGSqCSo7UIColor_"></a>
+                    <a name="//apple_ref/swift/Property/bottomLineActiveColor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout21bottomLineActiveColorGSqCSo7UIColor_">bottomLineActiveColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color of the bottom line when it is in the active state (when the TextField is the first responder).</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    It is only taken into account if the <code><a href="../Classes/TailoredTextInputLayout.html#/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout17bottomLineEnabledSb">bottomLineEnabled</a></code> is set to <code>true</code>.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">bottomLineActiveColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout20bottomLineErrorColorGSqCSo7UIColor_"></a>
+                    <a name="//apple_ref/swift/Property/bottomLineErrorColor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout20bottomLineErrorColorGSqCSo7UIColor_">bottomLineErrorColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color of the bottom line when it is in the error state (when the <code><a href="../Classes/TailoredTextInputLayout.html#/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout9errorTextGSqSS_">errorText</a></code> is set).</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    It is only taken into account if the <code><a href="../Classes/TailoredTextInputLayout.html#/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout17bottomLineEnabledSb">bottomLineEnabled</a></code> is set to <code>true</code>.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">bottomLineErrorColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Floating%20label%20customization"></a>
+                <a name="//apple_ref/swift/Section/Floating label customization" class="dashAnchor"></a>
+                <a href="#/Floating%20label%20customization">
+                  <h3 class="section-name">Floating label customization</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout20floatingLabelEnabledSb"></a>
+                    <a name="//apple_ref/swift/Property/floatingLabelEnabled" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout20floatingLabelEnabledSb">floatingLabelEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Whether the placeholder text is displayed as a floating label when the TextField is active.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">floatingLabelEnabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout23floatingLabelTranslateYV12CoreGraphics7CGFloat"></a>
+                    <a name="//apple_ref/swift/Property/floatingLabelTranslateY" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout23floatingLabelTranslateYV12CoreGraphics7CGFloat">floatingLabelTranslateY</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The value which the floating label needs to be tranlated upwards when displayed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">floatingLabelTranslateY</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mf">36.0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout22floatingLabelTextColorGSqCSo7UIColor_"></a>
+                    <a name="//apple_ref/swift/Property/floatingLabelTextColor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout22floatingLabelTextColorGSqCSo7UIColor_">floatingLabelTextColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The text color of the floating label.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">floatingLabelTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout27floatingLabelErrorTextColorGSqCSo7UIColor_"></a>
+                    <a name="//apple_ref/swift/Property/floatingLabelErrorTextColor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout27floatingLabelErrorTextColorGSqCSo7UIColor_">floatingLabelErrorTextColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The text color of the floating label when the TextField is in the error state.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">floatingLabelErrorTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout19floatingLabelInsetXV12CoreGraphics7CGFloat"></a>
+                    <a name="//apple_ref/swift/Property/floatingLabelInsetX" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout19floatingLabelInsetXV12CoreGraphics7CGFloat">floatingLabelInsetX</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The inset before the floating label.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">floatingLabelInsetX</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Placeholder%20text%20customization"></a>
+                <a name="//apple_ref/swift/Section/Placeholder text customization" class="dashAnchor"></a>
+                <a href="#/Placeholder%20text%20customization">
+                  <h3 class="section-name">Placeholder text customization</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout37isPlaceholderOnlyChangedOnTextEnteredSb"></a>
+                    <a name="//apple_ref/swift/Property/isPlaceholderOnlyChangedOnTextEntered" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout37isPlaceholderOnlyChangedOnTextEnteredSb">isPlaceholderOnlyChangedOnTextEntered</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Whether the placeholder display is changed as soon as the TextField becomes a first responder
+or only when text is entered. The placholder display can be changed in two ways:</p>
+
+<ul>
+<li>As a floating label</li>
+<li>Or completely disappear (as the default TextField behaves)</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">isPlaceholderOnlyChangedOnTextEntered</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout17placeholderInsetXV12CoreGraphics7CGFloat"></a>
+                    <a name="//apple_ref/swift/Property/placeholderInsetX" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout17placeholderInsetXV12CoreGraphics7CGFloat">placeholderInsetX</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The inset before and after the placeholder label.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">placeholderInsetX</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout17placeholderInsetYV12CoreGraphics7CGFloat"></a>
+                    <a name="//apple_ref/swift/Property/placeholderInsetY" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout17placeholderInsetYV12CoreGraphics7CGFloat">placeholderInsetY</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The inset above and below the placeholder label.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">placeholderInsetY</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout15placeholderTextGSqSS_"></a>
+                    <a name="//apple_ref/swift/Property/placeholderText" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout15placeholderTextGSqSS_">placeholderText</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The text to be displayed as placeholder and also
+as a floating label if that functionality is enabled.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">placeholderText</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout20placeholderTextColorGSqCSo7UIColor_"></a>
+                    <a name="//apple_ref/swift/Property/placeholderTextColor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout20placeholderTextColorGSqCSo7UIColor_">placeholderTextColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The text color of the placeholder.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">placeholderTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Detail%20text%20customization"></a>
+                <a name="//apple_ref/swift/Section/Detail text customization" class="dashAnchor"></a>
+                <a href="#/Detail%20text%20customization">
+                  <h3 class="section-name">Detail text customization</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout12detailInsetXV12CoreGraphics7CGFloat"></a>
+                    <a name="//apple_ref/swift/Property/detailInsetX" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout12detailInsetXV12CoreGraphics7CGFloat">detailInsetX</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The inset before and after the detail label.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">detailInsetX</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout10detailTextGSqSS_"></a>
+                    <a name="//apple_ref/swift/Property/detailText" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout10detailTextGSqSS_">detailText</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The text displayed in the detail label.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">detailText</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout15detailTextColorGSqCSo7UIColor_"></a>
+                    <a name="//apple_ref/swift/Property/detailTextColor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout15detailTextColorGSqCSo7UIColor_">detailTextColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The text color of the detail text.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">detailTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout19detailTextAlignmentOS_21TailoredTextAlignment"></a>
+                    <a name="//apple_ref/swift/Property/detailTextAlignment" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout19detailTextAlignmentOS_21TailoredTextAlignment">detailTextAlignment</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The alignment of the detail text. This property is used to store and set the alignment from code.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Another property called <code>detailTextAlignmentName</code> is used the set this value in the Interface Builder.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">detailTextAlignment</span> <span class="o">=</span> <span class="kt"><a href="../Enums/TailoredTextAlignment.html">TailoredTextAlignment</a></span><span class="o">.</span><span class="k">left</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Error%20display%20customization"></a>
+                <a name="//apple_ref/swift/Section/Error display customization" class="dashAnchor"></a>
+                <a href="#/Error%20display%20customization">
+                  <h3 class="section-name">Error display customization</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout11errorInsetXV12CoreGraphics7CGFloat"></a>
+                    <a name="//apple_ref/swift/Property/errorInsetX" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout11errorInsetXV12CoreGraphics7CGFloat">errorInsetX</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The inset to be applied before and after the error text.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">errorInsetX</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout9errorTextGSqSS_"></a>
+                    <a name="//apple_ref/swift/Property/errorText" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout9errorTextGSqSS_">errorText</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The text to be displayed as an error.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    If this is set anything different than <code>nil</code>, the error will be shown.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">errorText</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout17clearErrorOnInputSb"></a>
+                    <a name="//apple_ref/swift/Property/clearErrorOnInput" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout17clearErrorOnInputSb">clearErrorOnInput</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Whether the error state should be cleared as soon as text is entered.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">clearErrorOnInput</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout20displayBorderOnErrorSb"></a>
+                    <a name="//apple_ref/swift/Property/displayBorderOnError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout20displayBorderOnErrorSb">displayBorderOnError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Whether a border should be displayed in error state.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">displayBorderOnError</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout16errorBorderColorGSqCSo7UIColor_"></a>
+                    <a name="//apple_ref/swift/Property/errorBorderColor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout16errorBorderColorGSqCSo7UIColor_">errorBorderColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color of the border for the error state (when <code><a href="../Classes/TailoredTextInputLayout.html#/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout9errorTextGSqSS_">errorText</a></code> is not <code>nil</code>).</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    It is only taken into account if the <code><a href="../Classes/TailoredTextInputLayout.html#/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout20displayBorderOnErrorSb">displayBorderOnError</a></code> is set to <code>true</code>.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">errorBorderColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout14errorTextColorGSqCSo7UIColor_"></a>
+                    <a name="//apple_ref/swift/Property/errorTextColor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout14errorTextColorGSqCSo7UIColor_">errorTextColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The text color of the error text.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">errorTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout20errorBackgroundColorGSqCSo7UIColor_"></a>
+                    <a name="//apple_ref/swift/Property/errorBackgroundColor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout20errorBackgroundColorGSqCSo7UIColor_">errorBackgroundColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The background color of the error text.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">errorBackgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout33errorBackgroundBottomCornerRadiusV12CoreGraphics7CGFloat"></a>
+                    <a name="//apple_ref/swift/Property/errorBackgroundBottomCornerRadius" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout33errorBackgroundBottomCornerRadiusV12CoreGraphics7CGFloat">errorBackgroundBottomCornerRadius</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The bottom corner radius of the error text label&rsquo;s background.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">errorBackgroundBottomCornerRadius</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mf">0.0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout18errorTextAlignmentOS_21TailoredTextAlignment"></a>
+                    <a name="//apple_ref/swift/Property/errorTextAlignment" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout18errorTextAlignmentOS_21TailoredTextAlignment">errorTextAlignment</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The alignment of the error text. This property is used to store and set the alignment from code.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Another property called <code>errorTextAlignmentName</code> is used the set this value in the Interface Builder.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">errorTextAlignment</span> <span class="o">=</span> <span class="kt"><a href="../Enums/TailoredTextAlignment.html">TailoredTextAlignment</a></span><span class="o">.</span><span class="k">left</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Constraints%20and%20other%20IBOutlets"></a>
+                <a name="//apple_ref/swift/Section/Constraints and other IBOutlets" class="dashAnchor"></a>
+                <a href="#/Constraints%20and%20other%20IBOutlets">
+                  <h3 class="section-name">Constraints and other IBOutlets</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout9textFieldXwGSQCS_17TailoredTextField_"></a>
+                    <a name="//apple_ref/swift/Property/textField" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC30TailoredFloatingLabelTextInput23TailoredTextInputLayout9textFieldXwGSQCS_17TailoredTextField_">textField</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The contained <code><a href="../Classes/TailoredTextField.html">TailoredTextField</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBOutlet</span> <span class="kd">public</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">textField</span><span class="p">:</span> <span class="kt"><a href="../Classes/TailoredTextField.html">TailoredTextField</a></span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Initializers"></a>
+                <a name="//apple_ref/swift/Section/Initializers" class="dashAnchor"></a>
+                <a href="#/Initializers">
+                  <h3 class="section-name">Initializers</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC30TailoredFloatingLabelTextInput23TailoredTextInputLayoutcFT5coderCSo7NSCoder_GSqS0__"></a>
+                    <a name="//apple_ref/swift/Method/init(coder:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC30TailoredFloatingLabelTextInput23TailoredTextInputLayoutcFT5coderCSo7NSCoder_GSqS0__">init(coder:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns an object initialized from data in a given unarchiver.</p>
+
+<p>Overridden to call the <code>setupSubviews</code> method.</p>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <a href="https://developer.apple.com/documentation/foundation/nscoding/1416145-init">Apple Documentation</a>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">required</span> <span class="kd">public</span> <span class="nf">init</span><span class="p">?(</span><span class="n">coder</span> <span class="nv">aDecoder</span><span class="p">:</span> <span class="kt">NSCoder</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Other%20setup%20methods"></a>
+                <a name="//apple_ref/swift/Section/Other setup methods" class="dashAnchor"></a>
+                <a href="#/Other%20setup%20methods">
+                  <h3 class="section-name">Other setup methods</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC30TailoredFloatingLabelTextInput23TailoredTextInputLayout14layoutSubviewsFT_T_"></a>
+                    <a name="//apple_ref/swift/Method/layoutSubviews()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC30TailoredFloatingLabelTextInput23TailoredTextInputLayout14layoutSubviewsFT_T_">layoutSubviews()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Lays out subviews.
+Overridden to change the appearance of the view based on its properties.</p>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <a href="https://developer.apple.com/documentation/uikit/uiview/1622482-layoutsubviews">Apple Documentation</a>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">override</span> <span class="n">open</span> <span class="kd">func</span> <span class="nf">layoutSubviews</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/TailoredTextFieldDelegate%20implementation"></a>
+                <a name="//apple_ref/swift/Section/TailoredTextFieldDelegate implementation" class="dashAnchor"></a>
+                <a href="#/TailoredTextFieldDelegate%20implementation">
+                  <h3 class="section-name">TailoredTextFieldDelegate implementation</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC30TailoredFloatingLabelTextInput23TailoredTextInputLayout13onTextChangedFT4textGSqSS__T_"></a>
+                    <a name="//apple_ref/swift/Method/onTextChanged(text:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC30TailoredFloatingLabelTextInput23TailoredTextInputLayout13onTextChangedFT4textGSqSS__T_">onTextChanged(text:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Implemented to change the display of the placeholder label (display as a floating
+label or hide) and hide the error label when text is entered to the TextField.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">onTextChanged</span><span class="p">(</span><span class="nv">text</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>text</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The text after the change.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC30TailoredFloatingLabelTextInput23TailoredTextInputLayout26textFieldDidLayoutSubviewsFT_T_"></a>
+                    <a name="//apple_ref/swift/Method/textFieldDidLayoutSubviews()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC30TailoredFloatingLabelTextInput23TailoredTextInputLayout26textFieldDidLayoutSubviewsFT_T_">textFieldDidLayoutSubviews()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called when the TailoredTextFieldDelegate finished its <code>layoutSubviews</code> method.
+Implemented to change the appearance of the bottom line based on the state
+of the <code><a href="../Classes/TailoredTextField.html">TailoredTextField</a></code>, like when error needs to be displayed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">textFieldDidLayoutSubviews</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2017 <a class="link" href="https://gitlab.autsoft.hu/AutLibs/TailoredFloatingLabelTextInput" target="_blank" rel="external">AutSoft Kft. and Balázs Gerlei</a>. All rights reserved. (Last updated: 2017-06-26)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

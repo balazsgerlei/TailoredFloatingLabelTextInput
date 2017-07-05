@@ -2,6 +2,9 @@
 [![Swift 3.0](https://img.shields.io/badge/Swift-3.0-orange.svg?style=flat)](https://developer.apple.com/swift/)
 [![Platforms iOS](https://img.shields.io/badge/Platforms-iOS-lightgray.svg?style=flat)](https://developer.apple.com/swift/)
 [![Xcode 8.0+](https://img.shields.io/badge/Xcode-8.0+-blue.svg?style=flat)](https://developer.apple.com/swift/)
+[![CocoaPods](https://img.shields.io/cocoapods/v/TailoredFloatingLabelTextInput.svg)](https://cocoapods.org/pods/TailoredFloatingLabelTextInput)
+[![CocoaPods](https://img.shields.io/cocoapods/l/TailoredFloatingLabelTextInput.svg)](https://gitlab.autsoft.hu/AutLibs/TailoredFloatingLabelTextInput/blob/master/LICENSE)
+
 
 A highly customizable text input field written in Swift which have a floating label design pattern implementation among many other features. It has no external dependencies and can be used to implement not only Google's Material Design spec but many other designs as well.
 ___
@@ -25,10 +28,10 @@ Example Gif                |  Empty                    |  Filled                
 ## Requirements
 * Swift 3
 * iOS 9.0+
-* XCode8
+* XCode 8
 
 ## Installation
-### CocoaPods
+### CocoaPods [![CocoaPods](https://img.shields.io/cocoapods/v/TailoredFloatingLabelTextInput.svg)](https://cocoapods.org/pods/TailoredFloatingLabelTextInput)
 TailoredFloatingLabelTextInput is available through CocoaPods. To install it, simply add the following line to your Podfile:
 
 ```ruby

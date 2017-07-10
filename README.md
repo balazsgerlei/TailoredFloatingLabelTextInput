@@ -38,7 +38,7 @@ TailoredFloatingLabelTextInput is available through CocoaPods. To install it, si
 pod 'TailoredFloatingLabelTextInput', '~>  1.0'
 ```
 
-Or if you want to use a sepcific version:
+Or if you want to use a specific version:
 
 ```ruby
 pod 'TailoredFloatingLabelTextInput', '1.0.0'

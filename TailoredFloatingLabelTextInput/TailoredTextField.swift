@@ -651,7 +651,7 @@ private var bottomLineStorageKey: UInt8 = 0
     override open func awakeFromNib() {
         super.awakeFromNib()
         borderStyle = .none
-        placeholderLabel.font = UIFont.systemFont(ofSize: self.font?.pointSize ?? 18.0, weight: UIFontWeightLight)
+        placeholderLabel.font = UIFont.systemFont(ofSize: self.font?.pointSize ?? 18.0, weight: .light)
         detailLabel.font = UIFont.systemFont(ofSize: 12.0)
         
         addTargetHandlers()

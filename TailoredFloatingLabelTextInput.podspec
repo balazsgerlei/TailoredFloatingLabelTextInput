@@ -9,23 +9,23 @@ s.description  = <<-DESC
 A highly customizable text input field written in Swift which have a floating label design pattern implementation among many other features. It has no external dependencies and can be used to implement not only Google's Material Design spec but many other designs as well.
 DESC
 
-s.homepage     = "https://github.com/AutSoft/TailoredFloatingLabelTextInput"
+s.homepage     = "https://github.com/balazsgerlei/TailoredFloatingLabelTextInput"
 
 # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 s.license = { :type => "MIT", :file => "LICENSE" }
 
 
 # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-s.authors = { 'AutSoft Kft.' => 'info@autsoft.hu', 'Balázs Gerlei' => 'gerlei.balazs@autsoft.hu' }
+s.authors = { 'Balázs Gerlei' => 'gerlotdev@gmail.com' }
 
 
 # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 s.platform = :ios
-s.ios.deployment_target = '9.0'
+s.ios.deployment_target = '11.0'
 
 
 # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-s.source = { :git => "https://github.com/AutSoft/TailoredFloatingLabelTextInput.git", :tag => "#{s.version}" }
+s.source = { :git => "git@github.com:balazsgerlei/TailoredFloatingLabelTextInput.git", :tag => "#{s.version}" }
 
 
 # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

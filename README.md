@@ -171,14 +171,14 @@ The following properties can be changed to customize the appearance and behaviou
 * Full code documentation in the `docs` folder
 
 ## Development Goals
-- [x] Floating Label with nice, continouos animation
+- [x] Floating Label with nice, continuous animation
 - [x] Customizable error and detail display
 - [x] Configuration from Interface Builder (`@IBDesignable` with `@IBInspectable` properties)
 - [x] Normal and boxed Material Design Text Field implementations
 - [x] Full Code Documentation
-- [ ] CI integration
 - [ ] Unit tests
 - [ ] UI Tests with screenshot comparison
+- [ ] CI integration
 
 ## License
 

@@ -102,7 +102,7 @@ class MainViewController: UIViewController {
         }
     }
     
-    func dismissKeyboard() {
+    @objc func dismissKeyboard() {
         view.endEditing(true)
     }
     

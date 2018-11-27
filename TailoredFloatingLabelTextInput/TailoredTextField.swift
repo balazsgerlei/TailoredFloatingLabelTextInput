@@ -651,7 +651,7 @@ private var bottomLineStorageKey: UInt8 = 0
     override open func awakeFromNib() {
         super.awakeFromNib()
         borderStyle = .none
-        placeholderLabel.font = UIFont.systemFont(ofSize: self.font?.pointSize ?? 18.0, weight: UIFontWeightLight)
+        placeholderLabel.font = UIFont.systemFont(ofSize: self.font?.pointSize ?? 18.0, weight: UIFont.Weight.light)
         detailLabel.font = UIFont.systemFont(ofSize: 12.0)
         
         addTargetHandlers()
@@ -869,7 +869,7 @@ private var bottomLineStorageKey: UInt8 = 0
                 }
                 placeholderLabel.translatesAutoresizingMaskIntoConstraints = true
                 setAnchorPoint(CGPoint(x: 0.0, y: 0.5), for: placeholderLabel)
-                UIView.animate(withDuration: 0.15, delay: 0, options: UIViewAnimationOptions.curveEaseInOut, animations: {
+                UIView.animate(withDuration: 0.15, delay: 0, options: UIView.AnimationOptions.curveEaseInOut, animations: {
                     [weak self]
                     in
                     guard let strongSelf = self else {
@@ -879,7 +879,7 @@ private var bottomLineStorageKey: UInt8 = 0
                     strongSelf.layoutIfNeeded()
                     }, completion: nil)
             } else {
-                UIView.animate(withDuration: 0.15, delay: 0, options: UIViewAnimationOptions.curveEaseInOut, animations: {
+                UIView.animate(withDuration: 0.15, delay: 0, options: UIView.AnimationOptions.curveEaseInOut, animations: {
                     [weak self]
                     in
                     guard let strongSelf = self else {

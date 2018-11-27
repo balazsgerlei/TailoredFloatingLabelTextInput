@@ -616,7 +616,7 @@ import UIKit
     func xibSetup() {
         view = loadViewFromNib()
         view.frame = bounds
-        view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
+        view.autoresizingMask = [UIView.AutoresizingMask.flexibleWidth, UIView.AutoresizingMask.flexibleHeight]
         addSubview(view)
     }
     
@@ -787,7 +787,7 @@ import UIKit
                 }
                 placeholderLabel.translatesAutoresizingMaskIntoConstraints = true
                 setAnchorPoint(CGPoint(x: 0.0, y: 0.5), for: placeholderLabel)
-                UIView.animate(withDuration: 0.15, delay: 0, options: UIViewAnimationOptions.curveEaseInOut, animations: {
+                UIView.animate(withDuration: 0.15, delay: 0, options: UIView.AnimationOptions.curveEaseInOut, animations: {
                     [weak self]
                     in
                     guard let strongSelf = self else {
@@ -797,7 +797,7 @@ import UIKit
                     strongSelf.view.layoutIfNeeded()
                     }, completion: nil)
             } else {
-                UIView.animate(withDuration: 0.15, delay: 0, options: UIViewAnimationOptions.curveEaseInOut, animations: {
+                UIView.animate(withDuration: 0.15, delay: 0, options: UIView.AnimationOptions.curveEaseInOut, animations: {
                     [weak self]
                     in
                     guard let strongSelf = self else {

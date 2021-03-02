@@ -263,7 +263,7 @@
 			};
 			buildConfigurationList = 5DDCAB991E682DE000A203B3 /* Build configuration list for PBXProject "TailoredFloatingLabelTextInput" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,

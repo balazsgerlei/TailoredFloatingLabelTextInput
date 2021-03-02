@@ -285,7 +285,7 @@ private var bottomLineStorageKey: UInt8 = 0
     /// The label that displays the placeholder and is also transformed
     /// to be a floating label if that functionality is enabled.
     @IBInspectable
-    open let placeholderLabel = UILabel()
+    public let placeholderLabel = UILabel()
     
     /// The text to be displayed as placeholder and also
     /// as a floating label if that functionality is enabled.
@@ -328,7 +328,7 @@ private var bottomLineStorageKey: UInt8 = 0
     
     /// The label used to display the detail text.
     @IBInspectable
-    open let detailLabel = UILabel()
+    public let detailLabel = UILabel()
     
     /// The text displayed in the detail label.
     @IBInspectable

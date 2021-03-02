@@ -3,7 +3,7 @@
 [![Platforms iOS](https://img.shields.io/badge/Platforms-iOS-lightgray.svg?style=flat)](https://developer.apple.com/swift/)
 [![Xcode 8.0+](https://img.shields.io/badge/Xcode-8.0+-blue.svg?style=flat)](https://developer.apple.com/swift/)
 [![CocoaPods](https://img.shields.io/cocoapods/v/TailoredFloatingLabelTextInput.svg)](https://cocoapods.org/pods/TailoredFloatingLabelTextInput)
-[![CocoaPods](https://img.shields.io/cocoapods/l/TailoredFloatingLabelTextInput.svg)](https://gitlab.autsoft.hu/AutLibs/TailoredFloatingLabelTextInput/blob/master/LICENSE)
+[![CocoaPods](https://img.shields.io/cocoapods/l/TailoredFloatingLabelTextInput.svg)](https://github.com/balazsgerlei/TailoredFloatingLabelTextInput/blob/main/LICENSE)
 
 
 A highly customizable text input field written in Swift which have a floating label design pattern implementation among many other features. It has no external dependencies and can be used to implement not only Google's Material Design spec but many other designs as well.
@@ -12,7 +12,7 @@ ___
 
 Example Gif                |  Empty                    |  Filled                   |  Error
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
-![Tailored Floating Label Text Input in action](https://github.com/AutSoft/TailoredFloatingLabelTextInput/blob/master/screenshots/example.gif)  |  ![Tailored Floating Label Text Input in action 2](https://github.com/AutSoft/TailoredFloatingLabelTextInput/blob/master/screenshots/scr01.png) | ![Tailored Floating Label Text Input in action](https://github.com/AutSoft/TailoredFloatingLabelTextInput/blob/master/screenshots/scr05.png) | ![Tailored Floating Label Text Input in action 2](https://github.com/AutSoft/TailoredFloatingLabelTextInput/blob/master/screenshots/scr06.png)
+![Tailored Floating Label Text Input in action](https://github.com/balazsgerlei/TailoredFloatingLabelTextInput/blob/main/screenshots/example.gif)  |  ![Tailored Floating Label Text Input in action 2](https://github.com/balazsgerlei/TailoredFloatingLabelTextInput/blob/main/screenshots/scr01.png) | ![Tailored Floating Label Text Input in action](https://github.com/balazsgerlei/TailoredFloatingLabelTextInput/blob/main/screenshots/scr05.png) | ![Tailored Floating Label Text Input in action 2](https://github.com/balazsgerlei/TailoredFloatingLabelTextInput/blob/main/screenshots/scr06.png)
 
 
 
@@ -182,4 +182,4 @@ The following properties can be changed to customize the appearance and behaviou
 
 ## License
 
-This library is released under the MIT license. [See LICENSE](https://github.com/AutSoft/TailoredFloatingLabelTextInput/blob/master/LICENSE) for details.
+This library is released under the MIT license. [See LICENSE](https://github.com/balazsgerlei/TailoredFloatingLabelTextInput/blob/main/LICENSE) for details.
